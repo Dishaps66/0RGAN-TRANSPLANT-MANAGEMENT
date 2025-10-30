@@ -1,0 +1,187 @@
+/* General styles */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(to top left, #f0f3fa, #d9e7fa 70%);
+  color: #252525;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background: #2574a9;
+  color: #fff;
+  padding: 2rem 1rem 1.2rem 1rem;
+  text-align: center;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+}
+h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2.5rem;
+}
+.thoughts {
+  font-style: italic;
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+}
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 1.3rem;
+  margin-bottom: 2rem;
+}
+.chart-section,
+.donor-form-section {
+  background: #eaf6fa;
+  border-radius: 1.1rem;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 4px 12px rgba(37, 116, 169, 0.13);
+  min-width: 280px;
+  max-width: 320px;
+}
+.donor-form-section form label,
+#add-patient-form label {
+  display: block;
+  margin-top: 6px;
+  font-weight: 600;
+}
+.donor-form-section form input,
+#add-patient-form input {
+  width: 90%;
+  padding: 0.4em;
+  margin-bottom: 7px;
+  border-radius: 5px;
+  border: 1px solid #aad7f1;
+  font-size: 1em;
+}
+.donor-form-section button,
+#add-patient-form button {
+  background: #2574a9;
+  color: #fff;
+  padding: 6px 18px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.05em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.donor-form-section button:hover,
+#add-patient-form button:hover {
+  background: #20638f;
+}
+.msg {
+  font-size: 0.97em;
+  margin-top: 5px;
+}
+.msg.error {
+  color: crimson;
+}
+.msg.success {
+  color: green;
+}
+main {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+h2,
+h3 {
+  color: #2574a9;
+  margin-top: 2rem;
+}
+.table-container {
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+  min-width: 950px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(37, 116, 169, 0.14);
+}
+th,
+td {
+  border: none;
+  padding: 0.75rem 1rem;
+  text-align: center;
+}
+th {
+  background: #eaf3fc;
+  color: #20638f;
+  font-size: 1.04rem;
+}
+tr:nth-child(even) {
+  background: #f4f8fb;
+}
+tr:hover {
+  background: #dbeaf6;
+}
+.rank-1 {
+  background: #fffead;
+}
+.rank-2 {
+  background: #c5f2e0;
+}
+.rank-3 {
+  background: #ffd1ba;
+}
+#add-patient-section {
+  background: #f6fbfe;
+  border-radius: 1rem;
+  margin: 2.5rem auto 1.2rem auto;
+  padding: 1.1rem 2rem;
+  max-width: 1050px;
+  box-shadow: 0 4px 12px rgba(37, 116, 169, 0.07);
+}
+#add-patient-form input {
+  margin: 5px 8px 12px 0;
+  max-width: 170px;
+}
+.donate-info {
+  background: #eaf6fa;
+  margin: 2rem auto;
+  max-width: 900px;
+  border-left: 5px solid #2574a9;
+  padding: 1.2rem 2rem;
+  border-radius: 1rem;
+  font-size: 1.15rem;
+  text-align: center;
+}
+footer {
+  background: #20638f;
+  color: #fff;
+  padding: 0.7rem 0;
+  text-align: center;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  margin-top: 3rem;
+}
+@media (max-width: 1150px) {
+  main {
+    padding: 0 7px;
+  }
+}
+@media (max-width: 980px) {
+  table {
+    min-width: 700px;
+  }
+  .flex-row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 750px) {
+  table {
+    min-width: 500px;
+  }
+  body,
+  main {
+    padding: 0.1rem;
+    font-size: 0.98rem;
+  }
+}

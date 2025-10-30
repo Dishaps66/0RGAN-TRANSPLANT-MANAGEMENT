@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Transplant Patient Priority Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Organ Transplant Priority Dashboard</h1>
+    <p class="thoughts">
+      One organ donor can save up to eight lives.<br/>
+      Together, let's make second chances possible.
+    </p>
+  </header>
+  <main>
+    <div class="flex-row">
+      <section class="chart-section" style="max-width: 600px; flex-grow: 1;">
+        <h3>Factor Contributions to Priority Score</h3>
+        <canvas id="factorBarChart" width="600" height="300"></canvas>
+      </section>
+      <section class="donor-form-section">
+        <h3>Pledge to Become an Organ Donor</h3>
+        <form id="donor-form" autocomplete="off">
+          <label for="donor-name">Full Name:</label>
+          <input type="text" id="donor-name" required />
+          <label for="donor-age">Age:</label>
+          <input type="number" min="18" max="120" id="donor-age" required />
+          <label for="donor-email">Email:</label>
+          <input type="email" id="donor-email" required />
+          <button type="submit">Pledge Now</button>
+          <div id="donor-message" class="msg"></div>
+        </form>
+      </section>
+    </div>
+
+    <h2>Top 15 Patients In Need – Ranked For Priority</h2>
+    <div class="table-container">
+      <table id="patients-table">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Patient ID</th>
+            <th>Age</th>
+            <th>GFR</th>
+            <th>Serum Creatinine</th>
+            <th>Blood Urea</th>
+            <th>Severity Score</th>
+            <th>Wait Time (Days)</th>
+            <th>Compatibility Score</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <section id="add-patient-section">
+      <h3>Add New Patient for Ranking</h3>
+      <form id="add-patient-form" autocomplete="off">
+        <input placeholder="Patient ID" id="pid" maxlength="7" required />
+        <input type="number" placeholder="Age" id="age" min="1" max="120" required />
+        <input type="number" placeholder="GFR" id="gfr" step="0.01" min="1" max="90" required />
+        <input type="number" placeholder="Serum Creatinine" id="creat" step="0.01" min="0.5" max="16" required />
+        <input type="number" placeholder="Blood Urea" id="urea" step="0.01" min="10" max="200" required />
+        <input type="number" placeholder="Severity Score" id="sev" min="1" max="10" required />
+        <input type="number" placeholder="Wait Time (Days)" id="wait" min="1" max="2000" required />
+        <input type="number" placeholder="Compatibility Score" id="comp" step="0.01" min="0" max="1" required />
+        <button type="submit">Add Patient</button>
+        <div id="patient-message" class="msg"></div>
+      </form>
+    </section>
+
+    <section class="donate-info">
+      <h3>Your decision may save a life</h3>
+      <p>
+        Every minute counts. Patients are prioritized based on health, wait time, and compatibility.
+        <br />
+        Consider registering as an organ donor today — you can be someone's hope.
+      </p>
+    </section>
+  </main>
+  <footer>
+    <p>Transplant Priority Dashboard | Powered by Data & Hope</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
